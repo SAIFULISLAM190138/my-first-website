@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University </title>
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;1,200;1,600&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Baloo Bhai 2', cursive;
+            font-family: 'Source Sans Pro', sans-serif;
+
+        }
+
+        .header {
+            min-height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url('img/banner.png');
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .nav-links {
+            color: white;
+            display: inline-block;
+            position: absolute;
+            right: 12px;
+            width: 34%;
+        }
+
+        nav img {
+            width: 120px;
+            margin-top: 20px;
+            margin-left: 65px;
+        }
+
+        .nav-links ul {
+            padding: 9px;
+        }
+
+        .nav-links ul li {
+            display: inline-block;
+            margin-top: 20px;
+            margin-right: 10px;
+
+        }
+
+        .nav-links ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+        }
+
+        .nav-links ul li::after {
+            content: '';
+            width: 0%;
+            height: 2px;
+            color: #f44336;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+        }
+
+        .nav-links ul li:hover::after {
+            width: 100%;
+        }
+
+        .text-class {
+            color: white;
+            width: 90%;
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            transform: translate(-20%-50%);
+            text-align: center;
+        }
+
+        .text-class h1 {
+            font-size: 45px;
+        }
+
+        .new-btn {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            border: 1px solid white;
+            margin: 2px;
+            padding: 8px 8px;
+            background: transparent;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .new-btn:hover {
+            border: 1px solid #f44336;
+            background-color: #f44336;
+            transition: 1s;
+        }
+
+        .course {
+
+            text-align: center;
+            width: 100%;
+            margin-top: 80px;
+        }
+
+        h1 {
+            font-size: 50px;
+            font-weight: 600;
+
+        }
+
+        .course p {
+            color: #777;
+            font-size: 20px;
+            font-weight: 300;
+            padding: 15px;
+
+        }
+
+        .row {
+            margin-top: 8%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .class-col {
+            flex-basis: 31%;
+            background-color: #fff3ff;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            padding: 20px 12px;
+            box-sizing: border-box;
+            transition: 1s;
+
+        }
+
+        h3 {
+            text-align: center;
+            font-weight: 600;
+            margin: 15px 0;
+
+        }
+
+        .class-col:hover {
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .image {
+            display: flex;
+
+        }
+
+        .global {
+            text-align: center;
+            width: 100%;
+            margin-top: 80px;
+        }
+
+        .campus-clo {
+            flex-basis: 22%;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+            margin-top: 50px;
+            margin-left: 273px;
+            background: transparent;
+            transition: 0.5s;
+        }
+
+        .campus-clo img {
+            width: 230px;
+            display: block;
+
+        }
+
+        .campus-clo:hover {
+            background: rgba(266, 0, 0, 0.7);
+        }
+
+        .layal {
+
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+
+        }
+
+        .loyal:hover {
+            background: rgba(266, 0, 0, 0.7);
+        }
+
+
+        .campus-clo1 {
+            flex-basis: 22%;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+            margin-top: 50px;
+            margin-left: 23px
+        }
+
+        .campus-clo1 img {
+            width: 230px;
+            margin-right: 0px;
+
+        }
+
+        .layal1 {
+            background: transparent;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+
+        }
+
+        .campus-clo2 {
+            flex-basis: 22%;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+            margin-top: 50px;
+            margin-left: 23px
+        }
+
+        .campus-clo2 img {
+            width: 230px;
+
+        }
+
+        .layal2 {
+            background: transparent;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: 0.5s;
+
+        }
+
+        .facilities {
+            text-align: center;
+            width: 100%;
+            margin-top: 80px;
+            padding-top: 30px;
+        }
+
+        .facalities-col {
+            flex-basis: 32%;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            text-align: left;
+        }
+        .facalities-col img
+        {
+            width:100%;
+            border-radius: 10px;
+            
+           
+        }
+        .footer
+        {
+            text-align: center;
+            width: 100%;
+            margin-top: 80px;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="img/logo.png"></a>
+
+            <div class="nav-links">
+
+                <ul>
+                    <li> <a href="">HOME</a></li>
+                    <li> <a href="">ABOUT</a></li>
+                    <li> <a href="">COURSE</a></li>
+                    <li> <a href="">BLOG</a></li>
+                    <li> <a href=""> CONTACT</a></li>
+                </ul>
+            </div>
+
+        </nav>
+
+        <div class="text-class">
+            <h1> Words's Biggest University</h1>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Illum reiciendis quod ab maiores vel maxime quos.<br> Obcaecati saepe ut voluptatem qui, eius quia!</p>
+            <a href="" class="new-btn">Visit Us To Know More</a>
+        </div>
+    </section>
+
+    <section class="course">
+        <h1> Corses we offer</h1>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis reprehenderit accusantium vel.</p>
+        <div class="row">
+
+            <div class="class-col">
+                <h3>Intermideat</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora eius veniam fuga debitis
+                        placeat
+                        tempore ea corporis similique ratione! Vero minima consequatur quis tenetur neque.</p>
+            </div>
+            <div class="class-col">
+                <h3>Degree</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora eius veniam fuga debitis
+                        placeat
+                        tempore ea corporis similique ratione! Vero minima consequatur quis tenetur neque.</p>
+            </div>
+            <div class="class-col">
+                <h3>Post Graduation</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora eius veniam fuga debitis
+                        placeat
+                        tempore ea corporis similique ratione! Vero minima consequatur quis tenetur neque.</p>
+            </div>
+        </div>
+    </section>
+    <section class="global">
+        <h1> Our Global campus</h1>
+
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis reprehenderit accusantium vel.</p>
+        <section class="image">
+
+
+
+            <div class="row1">
+
+                <div class="campus-clo">
+                    <img src="img/london.png">
+                    <div class="layal">
+
+                        <h3>LONDON</h3>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row2">
+                <div class="campus-clo1">
+                    <img src="img/newyork.png">
+                    <div class="layal1">
+
+                        <h3>NEW YOURK</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row3">
+                <div class="campus-clo2">
+                    <img src="img/washington.png">
+                    <div class="layal2">
+
+                        <h3>WASHINGTON</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section class="facilities">
+
+        <h1>Our Facalities</h1>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis reprehenderit accusantium vel.</p>
+        <div class="row">
+
+            <div class="facalities-col">
+                <img src="img/library.png">
+                <h3>World Class Library</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quod veniam expedita, excepturi voluptatem atque dignissimos.</p>
+            </div>
+            <div class="facalities-col">
+                <img src="img/basketball.png">
+                <h3>Largest Play Ground</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quod veniam expedita, excepturi voluptatem atque dignissimos.</p>
+            </div>
+            <div class="facalities-col">
+                <img src="img/cafeteria.png">
+                <h3>Tastyb And Healthy Food</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quod veniam expedita, excepturi voluptatem atque dignissimos.</p>
+            </div>
+        </div>
+    </section>
+    <section  class="footer">
+  <h3>About Us</h3>
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati dolore dolorem corrupti 
+    veritatis non quo repudiandae sequi dolores ducimus nobis. <br> Provident, ipsum. Iusto, incidunt doloribus!</p>
+      
+    </section>
+</body>
+
+</html>
